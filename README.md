@@ -1,23 +1,26 @@
 # FoldKernel
 
-FoldKernel is the deterministic protocol engine for the Fold coherence instrument.
+FoldKernel is a deterministic protocol engine for generating verifiable coherence artifacts.
 
-It defines the mathematical and cryptographic rules used to generate
-verifiable Fold artifacts.
+It defines the mathematical and cryptographic rules used by the Fold coherence instrument to transform structured interaction into reproducible symbolic artifacts.
 
-FoldKernel intentionally contains no UI, rendering, or interaction logic.
+The kernel contains no user interface, rendering system, or application logic.
 It exists purely as protocol infrastructure.
 
----
+FoldKernel guarantees that identical interaction histories always produce identical artifacts.
+This determinism allows Fold artifacts to be independently reproduced, verified, and interpreted across different implementations.
 
-## Core Pipeline
+The protocol implements the following deterministic pipeline:
 
 interaction
 → permutation events
 → memory signature
 → convergence hash
 
-FoldKernel implements the deterministic components required for this pipeline.
+From this pipeline, higher-level systems can derive symbolic representations such as sigils or registry artifacts without altering the underlying protocol.
+
+FoldKernel is intentionally minimal and stable.
+Exploration layers, visualizations, and interaction vessels are built on top of the kernel rather than inside it.
 
 ---
 
