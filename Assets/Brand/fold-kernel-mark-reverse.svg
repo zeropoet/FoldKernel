@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-label="FoldKernel">
+  <defs><clipPath id="a" clip-rule="evenodd"><path d="M160 160H864V864H160ZM368 368V656H656V368Z"/></clipPath></defs>
+  <g fill="none" stroke="#fff" stroke-width="32">
+    <path clip-path="url(#a)" stroke-linecap="butt" d="M144 144L384 384M880 144L640 384M880 880L640 640M144 880L384 640"/>
+    <path stroke-linecap="square" stroke-linejoin="miter" d="M144 144H880V880H144ZM384 384H640V640H384Z"/>
+  </g>
+</svg>

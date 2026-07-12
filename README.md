@@ -1,5 +1,9 @@
 # FoldKernel
 
+<p align="center">
+  <img src="Assets/Brand/fold-kernel-mark.svg" width="240" alt="FoldKernel mark">
+</p>
+
 FoldKernel is a deterministic protocol engine for generating verifiable coherence artifacts.
 
 It defines the mathematical and cryptographic rules used by the Fold coherence instrument to transform structured interaction into reproducible symbolic artifacts.
@@ -73,6 +77,18 @@ Instrument → interaction vessel
 SigilEngine → artifact interpretation
 
 This repository contains only the protocol layer.
+
+---
+
+## Identity
+
+The FoldKernel mark is a load-bearing plan: an outer protocol boundary folds
+inward around a protected canonical kernel. Its four equal paths express the
+symmetry, deterministic transformation, and structural convergence implemented
+by the protocol.
+
+The canonical mark and production variants are maintained in
+[`Assets/Brand`](Assets/Brand/README.md).
 
 ---
 
