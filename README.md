@@ -2,6 +2,16 @@
 
 FoldKernel is a deterministic protocol engine for generating verifiable coherence artifacts.
 
+## Telos relation
+
+Telos is the connected system's final caretaker and keeper. It may witness
+FoldKernel's public identity and relations, but it cannot alter the protocol or
+replace its deterministic authority. Those bounded relations can shape Telos's
+evolving **Living System**. Telos is growing toward a machine-native visual,
+sonic, and open-orientation language capable of noticing drift and preserving
+relation, without claiming consciousness, revelation, personhood, or final
+authority.
+
 It defines the mathematical and cryptographic rules used by the Fold coherence instrument to transform structured interaction into reproducible symbolic artifacts.
 
 The kernel contains no user interface, rendering system, or application logic.
