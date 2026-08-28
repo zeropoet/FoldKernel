@@ -21,8 +21,7 @@ clipped exactly between the structural rings, producing clean joins at every
 size without overlaps or projecting diagonal caps.
 
 - `fold-kernel-mark.svg` — canonical accessible master in identity black
-- `fold-kernel-mark-mono.svg` — compact pure-black production asset
-- `fold-kernel-mark-reverse.svg` — compact white asset for dark fields
+- `fold-kernel-mark.png` — 1440 × 1440 raster derived from the canonical master
 
 Preserve the clear space already present in the 1024-unit field. Do not round
 corners, alter the relative stroke weights, fill the central kernel, or add a

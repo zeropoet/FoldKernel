@@ -1,9 +1,5 @@
 # FoldKernel
 
-<p align="center">
-  <img src="Assets/Brand/fold-kernel-mark.svg" width="240" alt="FoldKernel mark">
-</p>
-
 FoldKernel is a deterministic protocol engine for generating verifiable coherence artifacts.
 
 It defines the mathematical and cryptographic rules used by the Fold coherence instrument to transform structured interaction into reproducible symbolic artifacts.
