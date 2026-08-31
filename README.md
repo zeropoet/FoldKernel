@@ -39,6 +39,20 @@ in [`Tests/FoldKernelTests/Resources/conformance-vectors.json`](Tests/FoldKernel
 Any future implementation must reproduce those vectors byte-for-byte before it
 can claim FoldKernel compatibility.
 
+## Build with FoldKernel
+
+Start with the [developer preview](DEVELOPER.md). A runnable example accepts a
+permutation, lock-state byte, and topology byte, then emits the exact memory
+signature, convergence hash, and structural state:
+
+```bash
+swift run fold-kernel-example
+```
+
+The [product boundary](PRODUCT.md) distinguishes the open protocol that exists
+today from managed runtime, certification, instrument, and Telos services that
+remain future-facing. No paid service is implied by this repository release.
+
 ---
 
 ## Components

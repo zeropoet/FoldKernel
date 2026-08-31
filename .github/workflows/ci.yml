@@ -25,5 +25,7 @@ jobs:
         run: swift --version
       - name: Run tests
         run: swift test
+      - name: Verify developer preview
+        run: Scripts/verify-developer-preview.sh
       - name: Build release configuration
         run: swift build -c release

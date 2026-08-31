@@ -10,11 +10,19 @@ let package = Package(
         .library(
             name: "FoldKernel",
             targets: ["FoldKernel"]
+        ),
+        .executable(
+            name: "fold-kernel-example",
+            targets: ["FoldKernelExample"]
         )
     ],
     targets: [
         .target(
             name: "FoldKernel"
+        ),
+        .executableTarget(
+            name: "FoldKernelExample",
+            dependencies: ["FoldKernel"]
         ),
         .testTarget(
             name: "FoldKernelTests",
