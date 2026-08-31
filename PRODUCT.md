@@ -20,6 +20,7 @@ The current repository provides, under the MIT License:
 - a local executable example;
 - a public integration-declaration schema and Swift receipt verifier;
 - a deterministic, non-transferable Value Receipt 1.0 evidence lifecycle;
+- a preservation-safe Transformation Receipt 1.0 for consequential change;
 - macOS and Linux conformance testing; and
 - release-pinned package consumption.
 

@@ -84,6 +84,16 @@ external valuation basis and evidence digest; settlement cannot change the
 realized amount. Version 1.0 receipts are non-transferable, non-purchasable,
 non-appreciating, and contain no personal data.
 
+## Transformation receipts
+
+[`FoldKernel-Transformation-Receipt-1.0.0`](TRANSFORMATION_RECEIPTS.md) records
+that a preserved source was transformed, fulfilled, consumed, superseded, or
+retired. A derived output is required where one is claimed, but the source is
+never deleted or replaced. The receipt is deterministic, non-destructive,
+non-transferable, non-purchasable, non-appreciating, non-monetary, and contains
+no personal data. Operational systems may interpret a verified receipt through
+their own bounded capacity policy; they may not treat it as a coin or price.
+
 ---
 
 ## Components
