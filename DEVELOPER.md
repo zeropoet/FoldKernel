@@ -46,7 +46,7 @@ Pin a reviewed release rather than following `main`:
 dependencies: [
     .package(
         url: "https://github.com/zeropoet/FoldKernel.git",
-        exact: "1.0.3"
+        exact: "1.0.4"
     )
 ]
 ```

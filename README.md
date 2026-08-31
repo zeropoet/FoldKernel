@@ -113,6 +113,8 @@ Current protocol version:
 
 FoldKernel-1.0.0
 
+Current Swift package release: `v1.0.4`.
+
 The protocol version is embedded directly into artifact hashes.
 
 Future revisions will increment this identifier.
