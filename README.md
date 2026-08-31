@@ -74,6 +74,16 @@ The application owns event meaning and history, FoldKernel owns canonical
 encoding and convergence identity, and Telos may only observe public versions,
 verify the declared public contract, and report drift.
 
+## Value receipts
+
+[`FoldKernel-Value-Receipt-1.0.0`](VALUE_RECEIPTS.md) is an additive contract
+for carrying evidence of useful work through `unrealized`, `evidenced`,
+`realized`, and `settled` states. It does not alter any FoldKernel-1.0.0 hash or
+artifact output. Internal work cannot carry money until a receipt cites an
+external valuation basis and evidence digest; settlement cannot change the
+realized amount. Version 1.0 receipts are non-transferable, non-purchasable,
+non-appreciating, and contain no personal data.
+
 ---
 
 ## Components
@@ -113,7 +123,7 @@ Current protocol version:
 
 FoldKernel-1.0.0
 
-Current Swift package release: `v1.0.4`.
+Current Swift package release: `v1.0.5`.
 
 The protocol version is embedded directly into artifact hashes.
 
