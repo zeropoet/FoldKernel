@@ -14,22 +14,30 @@ let package = Package(
         .executable(
             name: "fold-kernel-example",
             targets: ["FoldKernelExample"]
+        ),
+        .executable(
+            name: "fold-kernel-integration",
+            targets: ["FoldKernelIntegration"]
         )
     ],
     targets: [
         .target(
-            name: "FoldKernel"
+            name: "FoldKernel",
+            resources: [
+                .process("Resources")
+            ]
         ),
         .executableTarget(
             name: "FoldKernelExample",
             dependencies: ["FoldKernel"]
         ),
+        .executableTarget(
+            name: "FoldKernelIntegration",
+            dependencies: ["FoldKernel"]
+        ),
         .testTarget(
             name: "FoldKernelTests",
-            dependencies: ["FoldKernel"],
-            resources: [
-                .process("Resources")
-            ]
+            dependencies: ["FoldKernel"]
         )
     ],
     swiftLanguageVersions: [.v5]

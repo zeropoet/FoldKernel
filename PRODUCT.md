@@ -18,6 +18,7 @@ The current repository provides, under the MIT License:
 - the Swift reference implementation;
 - immutable conformance vectors;
 - a local executable example;
+- a public integration-declaration schema and Swift receipt verifier;
 - macOS and Linux conformance testing; and
 - release-pinned package consumption.
 

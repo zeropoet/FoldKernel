@@ -91,6 +91,28 @@ produces a 256-bit hash. It must preserve validation order, canonical data,
 transform mappings, adjacency, invariants, memory bytes, version prefix, and
 Keccak construction.
 
+## Declare an integration
+
+Copy the shape defined by
+[`Integration/foldkernel-integration.schema.json`](Integration/foldkernel-integration.schema.json)
+into the consuming repository as `foldkernel-integration.json`. Declare the
+exact package version, the public manifest URL, application-owned meanings for
+each Fold event used, and the fixed authority sets.
+
+CI should then create evidence for the exact consumer commit it tested:
+
+```bash
+swift run fold-kernel-integration verify foldkernel-integration.json \
+  --source-commit "$GITHUB_SHA" \
+  --verified-at "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
+  --output "$RUNNER_TEMP/foldkernel-integration-receipt.json"
+```
+
+The declaration is stable; the receipt is commit-specific. Keeping these two
+layers separate avoids a self-referential manifest that changes the commit it
+claims to verify. Receipts may be retained as CI artifacts or by a separately
+bounded evidence service.
+
 ## Current boundary
 
 This repository is an MIT-licensed protocol and reference implementation. It

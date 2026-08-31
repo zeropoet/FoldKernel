@@ -53,6 +53,27 @@ The [product boundary](PRODUCT.md) distinguishes the open protocol that exists
 today from managed runtime, certification, instrument, and Telos services that
 remain future-facing. No paid service is implied by this repository release.
 
+## Integration contract
+
+Applications can publish a stable, public declaration of their FoldKernel
+version, event meanings, conformance-vector digest, and authority boundary.
+The Swift verifier runs all fifteen canonical checks before it emits a
+commit-specific receipt:
+
+```bash
+swift run fold-kernel-integration conformance
+swift run fold-kernel-integration verify foldkernel-integration.json \
+  --source-commit "$GIT_COMMIT" \
+  --verified-at "2026-08-31T12:00:00Z" \
+  --output foldkernel-integration-receipt.json
+```
+
+The declaration schema is
+[`Integration/foldkernel-integration.schema.json`](Integration/foldkernel-integration.schema.json).
+The application owns event meaning and history, FoldKernel owns canonical
+encoding and convergence identity, and Telos may only observe public versions,
+verify the declared public contract, and report drift.
+
 ---
 
 ## Components

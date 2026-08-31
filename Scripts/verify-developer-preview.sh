@@ -18,3 +18,10 @@ if [[ "$actual" != "$expected" ]]; then
 fi
 
 printf '%s\n' "FoldKernel developer preview verified."
+
+integration="$(swift run -c release fold-kernel-integration conformance)"
+printf '%s\n' "$integration" | grep -Fq '"checksPassed" : 15'
+printf '%s\n' "$integration" | grep -Fq '"valid" : true'
+printf '%s\n' "$integration" | grep -Fq '"vectorDigest" : "6f499505db8d966631993780c32960965fad039d11aa3606caad58e70845fb38"'
+
+printf '%s\n' "FoldKernel integration conformance verified."
