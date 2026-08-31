@@ -66,8 +66,9 @@ For any identical sequence of events:
 • artifacts are reproducible across machines  
 
 FoldKernel contains no randomness, timestamps, or external runtime
-dependencies. Its test target pins the official Swift Testing package so the
-conformance suite does not depend on the host's bundled test frameworks.
+dependencies. Its CI pins a Swift 6.1.2 toolchain to run the modern Swift
+Testing conformance suite while the package manifest remains compatible with
+Swift Package Manager 5.9 consumers.
 
 ---
 
