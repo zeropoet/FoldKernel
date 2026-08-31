@@ -1,0 +1,38 @@
+{
+  "protocolVersion": "FoldKernel-1.0.0",
+  "canonicalSquare": [13, 3, 2, 16, 8, 10, 11, 5, 12, 6, 7, 9, 1, 15, 14, 4],
+  "symmetryOrbit": {
+    "identity": [13, 3, 2, 16, 8, 10, 11, 5, 12, 6, 7, 9, 1, 15, 14, 4],
+    "rotate90": [1, 12, 8, 13, 15, 6, 10, 3, 14, 7, 11, 2, 4, 9, 5, 16],
+    "rotate180": [4, 14, 15, 1, 9, 7, 6, 12, 5, 11, 10, 8, 16, 2, 3, 13],
+    "rotate270": [16, 5, 9, 4, 2, 11, 7, 14, 3, 10, 6, 15, 13, 8, 12, 1],
+    "reflectHorizontal": [1, 15, 14, 4, 12, 6, 7, 9, 8, 10, 11, 5, 13, 3, 2, 16],
+    "reflectVertical": [16, 2, 3, 13, 5, 11, 10, 8, 9, 7, 6, 12, 4, 14, 15, 1],
+    "reflectMainDiagonal": [13, 8, 12, 1, 3, 10, 6, 15, 2, 11, 7, 14, 16, 5, 9, 4],
+    "reflectAntiDiagonal": [4, 9, 5, 16, 14, 7, 11, 2, 15, 6, 10, 3, 1, 12, 8, 13]
+  },
+  "keccak256": [
+    {
+      "name": "empty",
+      "inputHex": "",
+      "digestHex": "c5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470"
+    },
+    {
+      "name": "abc",
+      "inputHex": "616263",
+      "digestHex": "4e03657aea45a94fc7d47ba826c8d667c0d1e6e33a64a036ec44f58fa12d6c45"
+    }
+  ],
+  "memoryHistories": [
+    {
+      "name": "raw-three-byte-signature",
+      "memorySignatureHex": "010203",
+      "convergenceHashHex": "0c6ed2168c4bbc60aabd871964c43d515d2ffab1b9329d76dc741a72ac8cfe77"
+    },
+    {
+      "name": "complete-event-history",
+      "memorySignatureHex": "010102030405060708090a0b0c0d0e0f1002070301",
+      "convergenceHashHex": "4c27728c1a912f94a424aa7951573a1f40e047433b0774b442e1f4c65e53af5e"
+    }
+  ]
+}

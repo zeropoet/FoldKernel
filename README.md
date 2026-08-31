@@ -32,6 +32,13 @@ From this pipeline, higher-level systems can derive symbolic representations suc
 FoldKernel is intentionally minimal and stable.
 Exploration layers, visualizations, and interaction vessels are built on top of the kernel rather than inside it.
 
+The Swift package is the reference implementation, not the sole definition of
+the protocol. The normative byte-level contract is documented in
+[`PROTOCOL.md`](PROTOCOL.md), and machine-readable compatibility fixtures live
+in [`Tests/FoldKernelTests/Resources/conformance-vectors.json`](Tests/FoldKernelTests/Resources/conformance-vectors.json).
+Any future implementation must reproduce those vectors byte-for-byte before it
+can claim FoldKernel compatibility.
+
 ---
 
 ## Components
@@ -58,7 +65,9 @@ For any identical sequence of events:
 • the convergence hash will be identical  
 • artifacts are reproducible across machines  
 
-FoldKernel contains no randomness, timestamps, or external dependencies.
+FoldKernel contains no randomness, timestamps, or external runtime
+dependencies. Its test target pins the official Swift Testing package so the
+conformance suite does not depend on the host's bundled test frameworks.
 
 ---
 
@@ -71,6 +80,10 @@ FoldKernel-1.0.0
 The protocol version is embedded directly into artifact hashes.
 
 Future revisions will increment this identifier.
+
+Package releases may receive patch-level infrastructure updates without
+changing the embedded protocol identifier. Such releases must not alter any
+canonical output.
 
 ---
 
