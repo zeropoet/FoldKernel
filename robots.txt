@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://foldkernel.zeropoet.xyz/sitemap.xml

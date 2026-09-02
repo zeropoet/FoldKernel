@@ -2,6 +2,11 @@
 
 FoldKernel is a deterministic protocol engine for generating verifiable coherence artifacts.
 
+Canonical public entry: [foldkernel.zeropoet.xyz](https://foldkernel.zeropoet.xyz/).
+FoldKernel is a studio substrate beneath the Mancel Lindsey / Zeropoet artist
+and developer identity. Future works and instruments may begin from it at their
+own `<work>.zeropoet.xyz` address without inheriting another system's authority.
+
 ## Telos relation
 
 Telos is the connected system's final caretaker and keeper. It may witness
