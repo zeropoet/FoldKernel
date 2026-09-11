@@ -57,10 +57,11 @@ Geometry and tone may be derived from the same weighted structure; audio is a
 product of the process, not its cause. The writing and its meaning remain Root
 Logos's authority.
 
-FoldKernel 1.0.0 does not define a general-purpose relation-weight primitive.
-Until one is specified, versioned, and covered by conformance vectors,
-weighting remains an application-owned interpretation of verified kernel
-outputs rather than a protocol guarantee.
+[`FoldKernel-Relation-1.1.0`](RELATION_WEIGHTS.md) now formalizes the shared
+structural capability revealed by those works. Each independently evidenced
+observation contributes one deterministic unit of relation weight; duplicate
+delivery cannot inflate it. The application still owns evidence admission,
+relation meaning, and interpretation.
 
 FoldKernel is intentionally minimal and stable.
 Exploration layers, visualizations, and interaction vessels are built on top of the kernel rather than inside it.
@@ -142,6 +143,7 @@ FoldKernel provides:
 • structural convergence detection
 • stateless memory encoding
 • keccak-256 hash derivation
+• deterministic relation weights and node mass
 
 ---
 
@@ -162,9 +164,13 @@ Swift Package Manager 5.9 consumers.
 
 ## Version
 
-Current protocol version:
+Core protocol version:
 
 FoldKernel-1.0.0
+
+Current additive relation contract:
+
+FoldKernel-Relation-1.1.0
 
 Current Swift package release: `v1.0.5`.
 

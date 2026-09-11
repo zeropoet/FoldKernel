@@ -29,5 +29,18 @@ jobs:
         run: Scripts/verify-developer-preview.sh
       - name: Verify integration-contract schema
         run: python3 -m json.tool Integration/foldkernel-integration.schema.json >/dev/null
+      - name: Validate relation-weight schema and vector independently
+        run: |
+          python3 -m venv /tmp/foldkernel-vector-env
+          /tmp/foldkernel-vector-env/bin/pip install jsonschema==4.23.0 pycryptodome==3.23.0
+          /tmp/foldkernel-vector-env/bin/python Scripts/verify-relation-vector.py
       - name: Build release configuration
+        run: swift build -c release
+
+  swift-59:
+    runs-on: ubuntu-24.04
+    container: swift:5.9-jammy
+    steps:
+      - uses: actions/checkout@v7
+      - name: Build public library and executables with Swift 5.9
         run: swift build -c release

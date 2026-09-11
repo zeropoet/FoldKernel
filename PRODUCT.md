@@ -56,12 +56,12 @@ propagation modules derived from lessons proven in the zeropoet.xyz ecosystem.
 The existing artworks, brands, private data, and repository-specific authority
 do not become generic customer templates.
 
-Current studio evidence includes Root Logos, whose integration derives
-relation weights from FoldKernel identities and uses them to condition a
-writing grammar, and visual and sonic works whose form and tone are derived
-from the same structural record. These are demonstrations of capacity, not
-features claimed by the kernel itself. A generic weighting contract remains a
-possible future protocol, not a FoldKernel 1.0.0 claim.
+Current studio evidence includes Root Logos, which uses deterministic relation
+weights to condition a writing grammar, and Sovereign Standard, which uses the
+same contract to condition its Sigil Engine. Their visual, textual, material,
+and sonic interpretations remain application-owned. The shared weighting law
+is now formalized as the additive `FoldKernel-Relation-1.1.0` contract without
+changing FoldKernel 1.0.0 outputs.
 
 ### Telos console
 

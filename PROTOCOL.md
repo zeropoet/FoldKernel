@@ -109,6 +109,13 @@ Keccak construction, or digest output requires a new protocol identifier and a
 new vector set. Existing vectors must remain available for historical
 verification.
 
+## Additive relation-weight contract
+
+FoldKernel 1.1 adds a relation-weight contract without changing the 1.0.0 core
+defined above. Its observation model, canonical bytes, weighting law, and
+authority boundary are specified in [`RELATION_WEIGHTS.md`](RELATION_WEIGHTS.md).
+Existing memory signatures and convergence hashes remain byte-identical.
+
 The 1.0.0 Swift reference sources retain Swift 5 language semantics when built
 with the Swift 6 toolchain. A language-mode migration is a separate compatibility
 change and must first prove all vectors unchanged.
