@@ -37,7 +37,8 @@ let package = Package(
         ),
         .testTarget(
             name: "FoldKernelTests",
-            dependencies: ["FoldKernel"]
+            dependencies: ["FoldKernel"],
+            resources: [.copy("Resources")]
         )
     ],
     swiftLanguageVersions: [.v5]

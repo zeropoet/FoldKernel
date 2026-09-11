@@ -109,8 +109,8 @@ struct RelationWeightTests {
             let canonicalBytesHex: String
             let expected: FoldRelationMap
         }
-        let url = URL(fileURLWithPath: #filePath).deletingLastPathComponent()
-            .appendingPathComponent("Resources/relation-weight-vectors.json")
+        let url = try #require(Bundle.module.url(forResource: "relation-weight-vectors",
+                                                withExtension: "json", subdirectory: "Resources"))
         let vector = try JSONDecoder().decode(Vector.self, from: Data(contentsOf: url))
         let observations = try vector.observations.map {
             try FoldRelationObservation(sourceIdentity: $0.sourceIdentity, targetIdentity: $0.targetIdentity,

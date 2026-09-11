@@ -1,4 +1,5 @@
 """Independent relation contract check. Dependencies are pinned in CI."""
+import copy
 import json
 from collections import Counter
 from pathlib import Path
@@ -10,7 +11,12 @@ root = Path(__file__).resolve().parents[1]
 schema = json.loads((root / "Integration/foldkernel-relation-map.schema.json").read_text())
 vector = json.loads((root / "Tests/FoldKernelTests/Resources/relation-weight-vectors.json").read_text())
 Draft202012Validator.check_schema(schema)
-Draft202012Validator(schema).validate(vector["expected"])
+validator = Draft202012Validator(schema)
+validator.validate(vector["expected"])
+for invalid_kind in ["informs\n", "", "Informs", "é", "a" * 65]:
+    invalid = copy.deepcopy(vector["expected"])
+    invalid["relations"][0]["kind"] = invalid_kind
+    assert not validator.is_valid(invalid), invalid_kind
 fields = ("sourceIdentity", "targetIdentity", "kind", "evidenceDigest")
 observations = sorted({tuple(o[k] for k in fields) for o in vector["observations"]})
 encoded = b"FoldKernel-Relation-1.1.0" + len(observations).to_bytes(4, "big")
