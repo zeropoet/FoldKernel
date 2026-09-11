@@ -4,7 +4,9 @@
 
 This repository is an independently governed module and project authority. [`zeropoet.xyz`](https://zeropoet.xyz/) is the studio index: it makes this work and its relations legible without absorbing them. [`rootlogos.com`](https://rootlogos.com/) is the public surface of synthesis: it builds from bounded outputs of the studio's repositories without replacing their sources, histories, or laws. This separation fulfills the system's working law—preserve authority at the source, reveal relation at studio scale, and permit synthesis without possession—as Root Logos enters its Weave era.
 
-FoldKernel is a deterministic protocol engine for generating verifiable coherence artifacts.
+FoldKernel is a deterministic relational protocol for preserving structured
+events, evaluating their relation to canonical constraints, and producing
+verifiable identities that higher-level systems can use as weights.
 
 Canonical public entry: [foldkernel.zeropoet.xyz](https://foldkernel.zeropoet.xyz/).
 FoldKernel is a studio substrate beneath the Mancel Lindsey / Zeropoet artist
@@ -37,6 +39,28 @@ interaction
 → convergence hash
 
 From this pipeline, higher-level systems can derive symbolic representations such as sigils or registry artifacts without altering the underlying protocol.
+
+## Defined through use
+
+FoldKernel's byte contract is stable, but its demonstrated capacity is not
+finished. Works produced through the protocol are evidence of what its
+relations can support. They may refine FoldKernel's public definition, expose
+new application patterns, and motivate explicit future protocol versions. They
+do not retroactively alter canonical outputs or transfer authorship to the
+kernel.
+
+Root Logos is the clearest current example. Root Logos reads fragments and
+encounters. FoldKernel preserves their structural history as reproducible
+identity. The Root Logos integration derives relational weights from that
+record; those weights condition a grammar through which Root Logos writes.
+Geometry and tone may be derived from the same weighted structure; audio is a
+product of the process, not its cause. The writing and its meaning remain Root
+Logos's authority.
+
+FoldKernel 1.0.0 does not define a general-purpose relation-weight primitive.
+Until one is specified, versioned, and covered by conformance vectors,
+weighting remains an application-owned interpretation of verified kernel
+outputs rather than a protocol guarantee.
 
 FoldKernel is intentionally minimal and stable.
 Exploration layers, visualizations, and interaction vessels are built on top of the kernel rather than inside it.

@@ -5,6 +5,12 @@
 FoldKernel is deterministic identity and provenance infrastructure for systems
 that must evolve without losing their origin.
 
+Its definition is evidence-led. The normative protocol says what every
+compatible implementation must reproduce; works made through it show what that
+structure can become. Those works may deepen the product language and reveal
+requirements for later, explicitly versioned contracts, but cannot silently
+change FoldKernel 1.0.0 or make the kernel their author.
+
 The initial audience is not every application developer. It is builders of
 long-lived digital and material bodies of work: generative studios, archives,
 serialized-object programs, collectible publishers, cultural institutions,
@@ -49,6 +55,13 @@ Offer separately bounded visual, sonic, material-production, issuance, and
 propagation modules derived from lessons proven in the zeropoet.xyz ecosystem.
 The existing artworks, brands, private data, and repository-specific authority
 do not become generic customer templates.
+
+Current studio evidence includes Root Logos, whose integration derives
+relation weights from FoldKernel identities and uses them to condition a
+writing grammar, and visual and sonic works whose form and tone are derived
+from the same structural record. These are demonstrations of capacity, not
+features claimed by the kernel itself. A generic weighting contract remains a
+possible future protocol, not a FoldKernel 1.0.0 claim.
 
 ### Telos console
 
