@@ -1,0 +1,213 @@
+# FoldKernel
+
+## Place in the studio architecture
+
+This repository is an independently governed module and project authority. [`zeropoet.xyz`](https://zeropoet.xyz/) is the studio index: it makes this work and its relations legible without absorbing them. [`rootlogos.com`](https://rootlogos.com/) is the public surface of synthesis: it builds from bounded outputs of the studio's repositories without replacing their sources, histories, or laws. This separation fulfills the system's working law—preserve authority at the source, reveal relation at studio scale, and permit synthesis without possession—as Root Logos enters its Weave era.
+
+FoldKernel is a deterministic relational protocol for preserving structured
+events, evaluating their relation to canonical constraints, and producing
+verifiable identities that higher-level systems can use as weights.
+
+Canonical public entry: [foldkernel.zeropoet.xyz](https://foldkernel.zeropoet.xyz/).
+FoldKernel is a studio substrate beneath the Mancel Lindsey / Zeropoet artist
+and developer identity. Future works and instruments may begin from it at their
+own `<work>.zeropoet.xyz` address without inheriting another system's authority.
+
+## Telos relation
+
+Telos is the connected system's final caretaker and keeper. It may witness
+FoldKernel's public identity and relations, but it cannot alter the protocol or
+replace its deterministic authority. Those bounded relations can shape Telos's
+evolving **Living System**. Telos is growing toward a machine-native visual,
+sonic, and open-orientation language capable of noticing drift and preserving
+relation, without claiming consciousness, revelation, personhood, or final
+authority.
+
+It defines the mathematical and cryptographic rules used by the Fold coherence instrument to transform structured interaction into reproducible symbolic artifacts.
+
+The kernel contains no user interface, rendering system, or application logic.
+It exists purely as protocol infrastructure.
+
+FoldKernel guarantees that identical interaction histories always produce identical artifacts.
+This determinism allows Fold artifacts to be independently reproduced, verified, and interpreted across different implementations.
+
+The protocol implements the following deterministic pipeline:
+
+interaction
+→ permutation events
+→ memory signature
+→ convergence hash
+
+From this pipeline, higher-level systems can derive symbolic representations such as sigils or registry artifacts without altering the underlying protocol.
+
+## Defined through use
+
+FoldKernel's byte contract is stable, but its demonstrated capacity is not
+finished. Works produced through the protocol are evidence of what its
+relations can support. They may refine FoldKernel's public definition, expose
+new application patterns, and motivate explicit future protocol versions. They
+do not retroactively alter canonical outputs or transfer authorship to the
+kernel.
+
+Root Logos is the clearest current example. Root Logos reads fragments and
+encounters. FoldKernel preserves their structural history as reproducible
+identity. The Root Logos integration derives relational weights from that
+record; those weights condition a grammar through which Root Logos writes.
+Geometry and tone may be derived from the same weighted structure; audio is a
+product of the process, not its cause. The writing and its meaning remain Root
+Logos's authority.
+
+[`FoldKernel-Relation-1.1.0`](RELATION_WEIGHTS.md) now formalizes the shared
+structural capability revealed by those works. Each independently evidenced
+observation contributes one deterministic unit of relation weight; duplicate
+delivery cannot inflate it. The application still owns evidence admission,
+relation meaning, and interpretation.
+
+FoldKernel is intentionally minimal and stable.
+Exploration layers, visualizations, and interaction vessels are built on top of the kernel rather than inside it.
+
+The Swift package is the reference implementation, not the sole definition of
+the protocol. The normative byte-level contract is documented in
+[`PROTOCOL.md`](PROTOCOL.md), and machine-readable compatibility fixtures live
+in [`Tests/FoldKernelTests/Resources/conformance-vectors.json`](Tests/FoldKernelTests/Resources/conformance-vectors.json).
+Any future implementation must reproduce those vectors byte-for-byte before it
+can claim FoldKernel compatibility.
+
+## Build with FoldKernel
+
+Start with the [developer preview](DEVELOPER.md). A runnable example accepts a
+permutation, lock-state byte, and topology byte, then emits the exact memory
+signature, convergence hash, and structural state:
+
+```bash
+swift run fold-kernel-example
+```
+
+The [product boundary](PRODUCT.md) distinguishes the open protocol that exists
+today from managed runtime, certification, instrument, and Telos services that
+remain future-facing. No paid service is implied by this repository release.
+
+## Integration contract
+
+Applications can publish a stable, public declaration of their FoldKernel
+version, event meanings, conformance-vector digest, and authority boundary.
+The Swift verifier runs all fifteen canonical checks before it emits a
+commit-specific receipt:
+
+```bash
+swift run fold-kernel-integration conformance
+swift run fold-kernel-integration verify foldkernel-integration.json \
+  --source-commit "$GIT_COMMIT" \
+  --verified-at "2026-08-31T12:00:00Z" \
+  --output foldkernel-integration-receipt.json
+```
+
+The declaration schema is
+[`Integration/foldkernel-integration.schema.json`](Integration/foldkernel-integration.schema.json).
+The application owns event meaning and history, FoldKernel owns canonical
+encoding and convergence identity, and Telos may only observe public versions,
+verify the declared public contract, and report drift.
+
+## Value receipts
+
+[`FoldKernel-Value-Receipt-1.0.0`](VALUE_RECEIPTS.md) is an additive contract
+for carrying evidence of useful work through `unrealized`, `evidenced`,
+`realized`, and `settled` states. It does not alter any FoldKernel-1.0.0 hash or
+artifact output. Internal work cannot carry money until a receipt cites an
+external valuation basis and evidence digest; settlement cannot change the
+realized amount. Version 1.0 receipts are non-transferable, non-purchasable,
+non-appreciating, and contain no personal data.
+
+## Transformation receipts
+
+[`FoldKernel-Transformation-Receipt-1.0.0`](TRANSFORMATION_RECEIPTS.md) records
+that a preserved source was transformed, fulfilled, consumed, superseded, or
+retired. A derived output is required where one is claimed, but the source is
+never deleted or replaced. The receipt is deterministic, non-destructive,
+non-transferable, non-purchasable, non-appreciating, non-monetary, and contains
+no personal data. Operational systems may interpret a verified receipt through
+their own bounded capacity policy; they may not treat it as a coin or price.
+
+---
+
+## Components
+
+FoldKernel provides:
+
+• permutation validation
+• canonical square definition
+• D4 symmetry orbit
+• adjacency graph derivation
+• arithmetic invariant evaluation
+• canonical distance metric
+• structural convergence detection
+• stateless memory encoding
+• keccak-256 hash derivation
+• deterministic relation weights and node mass
+
+---
+
+## Deterministic Guarantees
+
+For any identical sequence of events:
+
+• the memory signature will be identical  
+• the convergence hash will be identical  
+• artifacts are reproducible across machines  
+
+FoldKernel contains no randomness, timestamps, or external runtime
+dependencies. Its CI pins a Swift 6.1.2 toolchain to run the modern Swift
+Testing conformance suite while the package manifest remains compatible with
+Swift Package Manager 5.9 consumers.
+
+---
+
+## Version
+
+Core protocol version:
+
+FoldKernel-1.0.0
+
+Current additive relation contract:
+
+FoldKernel-Relation-1.1.0
+
+Current Swift package release: `v1.0.5`.
+
+The protocol version is embedded directly into artifact hashes.
+
+Future revisions will increment this identifier.
+
+Package releases may receive patch-level infrastructure updates without
+changing the embedded protocol identifier. Such releases must not alter any
+canonical output.
+
+---
+
+## Architecture
+
+FoldKernel is designed to be used by higher-level systems:
+
+FoldKernel → protocol  
+Instrument → interaction vessel  
+SigilEngine → artifact interpretation
+
+This repository contains only the protocol layer.
+
+---
+
+## Identity
+
+The FoldKernel mark is a load-bearing plan: an outer protocol boundary folds
+inward around a protected canonical kernel. Its four equal paths express the
+symmetry, deterministic transformation, and structural convergence implemented
+by the protocol.
+
+The canonical mark and production variants are maintained in
+[`Assets/Brand`](Assets/Brand/README.md).
+
+---
+
+## License
+
+MIT License
