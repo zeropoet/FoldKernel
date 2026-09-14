@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/zeropoet/FoldKernel/main/Integration/foldkernel-integration.schema.json",
+  "title": "FoldKernel Integration Declaration",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contractVersion", "consumer", "foldKernel", "authority", "eventMeanings"],
+  "properties": {
+    "contractVersion": { "const": "FoldKernel-Integration-1.0.0" },
+    "consumer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "repository", "publicManifestURL"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "repository": { "type": "string", "format": "uri", "pattern": "^https://" },
+        "publicManifestURL": { "type": "string", "format": "uri", "pattern": "^https://" }
+      }
+    },
+    "foldKernel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["protocolVersion", "packageRequirement", "conformanceVectors"],
+      "properties": {
+        "protocolVersion": { "const": "FoldKernel-1.0.0" },
+        "packageRequirement": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "version"],
+          "properties": {
+            "kind": { "const": "exact" },
+            "version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" }
+          }
+        },
+        "conformanceVectors": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["algorithm", "digest"],
+          "properties": {
+            "algorithm": { "const": "keccak-256" },
+            "digest": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+          }
+        }
+      }
+    },
+    "authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["applicationOwns", "foldKernelOwns", "telosMay", "telosMustNot"],
+      "properties": {
+        "applicationOwns": { "$ref": "#/$defs/authorityList" },
+        "foldKernelOwns": { "$ref": "#/$defs/authorityList" },
+        "telosMay": { "$ref": "#/$defs/authorityList" },
+        "telosMustNot": { "$ref": "#/$defs/authorityList" }
+      }
+    },
+    "eventMeanings": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["event", "owner", "meaning"],
+        "properties": {
+          "event": { "enum": ["permutation_commit", "lock_state_change", "fold_topology_change"] },
+          "owner": { "type": "string", "minLength": 1 },
+          "meaning": { "type": "string", "minLength": 1 }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "authorityList": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "type": "string", "minLength": 1 }
+    }
+  }
+}
