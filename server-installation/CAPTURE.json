@@ -1,0 +1,11 @@
+{
+  "authority": "Installed server source/public releases; repository root retains the source baseline. Private runtime data is excluded.",
+  "captures": [
+    {
+      "source": "/var/www/foldkernel/releases/relation-1.1.0-333d158",
+      "destination": "public",
+      "files": 11,
+      "sha256": "81febaba149a62b062c930d218cd61d0f9102489de8c2a64ff2669d9cf1a7f05"
+    }
+  ]
+}
