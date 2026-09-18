@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/zeropoet/FoldKernel/main/Integration/foldkernel-value-receipt.schema.json",
+  "title": "FoldKernel Value Receipt 1.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contractVersion", "digestAlgorithm", "receiptID", "sourceSystem", "eventID",
+    "artifactDigest", "outputKind", "periodStart", "periodEnd", "state",
+    "valuationBasis", "transferable", "purchasable", "appreciating", "personalData"
+  ],
+  "properties": {
+    "contractVersion": { "const": "FoldKernel-Value-Receipt-1.0.0" },
+    "digestAlgorithm": { "const": "keccak-256" },
+    "receiptID": { "$ref": "#/$defs/digest" },
+    "sourceSystem": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]{0,119}$" },
+    "eventID": { "type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,119}$" },
+    "artifactDigest": { "$ref": "#/$defs/digest" },
+    "outputKind": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]{0,79}$" },
+    "periodStart": { "$ref": "#/$defs/date" },
+    "periodEnd": { "$ref": "#/$defs/date" },
+    "state": { "enum": ["unrealized", "evidenced", "realized", "settled"] },
+    "valuationBasis": { "enum": ["none", "settled_receipt", "verified_cost_avoidance", "redemption_obligation"] },
+    "currency": { "type": ["string", "null"] },
+    "monetaryCounterpartCents": { "type": ["integer", "null"], "minimum": 1 },
+    "valuationEvidenceDigest": { "anyOf": [{ "$ref": "#/$defs/digest" }, { "type": "null" }] },
+    "settlementEvidenceDigest": { "anyOf": [{ "$ref": "#/$defs/digest" }, { "type": "null" }] },
+    "priorReceiptID": { "anyOf": [{ "$ref": "#/$defs/digest" }, { "type": "null" }] },
+    "transferable": { "const": false },
+    "purchasable": { "const": false },
+    "appreciating": { "const": false },
+    "personalData": { "const": false }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "state": { "enum": ["unrealized", "evidenced"] } } },
+      "then": {
+        "properties": {
+          "valuationBasis": { "const": "none" },
+          "currency": { "type": "null" },
+          "monetaryCounterpartCents": { "type": "null" },
+          "valuationEvidenceDigest": { "type": "null" },
+          "settlementEvidenceDigest": { "type": "null" }
+        }
+      }
+    },
+    {
+      "if": { "properties": { "state": { "const": "unrealized" } } },
+      "then": { "properties": { "priorReceiptID": { "type": "null" } } }
+    },
+    {
+      "if": { "properties": { "state": { "enum": ["realized", "settled"] } } },
+      "then": {
+        "required": ["currency", "monetaryCounterpartCents", "valuationEvidenceDigest", "priorReceiptID"],
+        "properties": {
+          "valuationBasis": { "enum": ["settled_receipt", "verified_cost_avoidance", "redemption_obligation"] },
+          "currency": { "const": "USD" },
+          "monetaryCounterpartCents": { "type": "integer", "minimum": 1 },
+          "valuationEvidenceDigest": { "$ref": "#/$defs/digest" },
+          "priorReceiptID": { "$ref": "#/$defs/digest" }
+        }
+      }
+    },
+    {
+      "if": { "properties": { "state": { "const": "settled" } } },
+      "then": {
+        "required": ["settlementEvidenceDigest"],
+        "properties": { "settlementEvidenceDigest": { "$ref": "#/$defs/digest" } }
+      }
+    }
+  ],
+  "$defs": {
+    "digest": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "date": { "type": "string", "format": "date", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" }
+  }
+}
