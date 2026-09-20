@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">FoldKernel mark</title>
+  <desc id="desc">A square protocol boundary folds inward from four corners around a protected square kernel.</desc>
+  <metadata>
+    Classification: public identity asset.
+    Source of truth: this SVG.
+    Construction: one outer square, one inner square, and four corner folds.
+    Meaning: boundary, transformation, convergence, kernel.
+  </metadata>
+  <defs>
+    <!-- Restrict fold strokes to the clear span between the two structural rings. -->
+    <clipPath id="fold-span" clip-rule="evenodd">
+      <path d="M160 160H864V864H160ZM368 368V656H656V368Z"/>
+    </clipPath>
+  </defs>
+  <g fill="none" stroke="#111111" stroke-width="32">
+    <g clip-path="url(#fold-span)" stroke-linecap="butt">
+      <path d="M144 144L384 384M880 144L640 384M880 880L640 640M144 880L384 640"/>
+    </g>
+    <g stroke-linecap="square" stroke-linejoin="miter">
+      <rect x="144" y="144" width="736" height="736"/>
+      <rect x="384" y="384" width="256" height="256"/>
+    </g>
+  </g>
+</svg>
