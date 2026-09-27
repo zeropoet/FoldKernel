@@ -1,0 +1,64 @@
+{
+  "observations": [
+    {
+      "sourceIdentity": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "targetIdentity": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "kind": "conditions",
+      "evidenceDigest": "1111111111111111111111111111111111111111111111111111111111111111"
+    },
+    {
+      "sourceIdentity": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "targetIdentity": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "kind": "conditions",
+      "evidenceDigest": "2222222222222222222222222222222222222222222222222222222222222222"
+    },
+    {
+      "sourceIdentity": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "targetIdentity": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "kind": "informs",
+      "evidenceDigest": "3333333333333333333333333333333333333333333333333333333333333333"
+    },
+    {
+      "sourceIdentity": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "targetIdentity": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "kind": "conditions",
+      "evidenceDigest": "1111111111111111111111111111111111111111111111111111111111111111"
+    }
+  ],
+  "canonicalBytesHex": "466f6c644b65726e656c2d52656c6174696f6e2d312e312e3000000003aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb000a636f6e646974696f6e731111111111111111111111111111111111111111111111111111111111111111aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb000a636f6e646974696f6e732222222222222222222222222222222222222222222222222222222222222222bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc0007696e666f726d733333333333333333333333333333333333333333333333333333333333333333",
+  "expected": {
+    "contractVersion": "FoldKernel-Relation-1.1.0",
+    "coreProtocolVersion": "FoldKernel-1.0.0",
+    "digestAlgorithm": "keccak-256",
+    "relationMapID": "f8cb0a2521540338b83b3b85fa068a1dad2af6725f2b75a342c25c8781440763",
+    "uniqueObservationCount": 3,
+    "relations": [
+      {
+        "sourceIdentity": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "targetIdentity": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "kind": "conditions",
+        "weight": 2
+      },
+      {
+        "sourceIdentity": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "targetIdentity": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "kind": "informs",
+        "weight": 1
+      }
+    ],
+    "nodes": [
+      {
+        "identity": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "mass": 2
+      },
+      {
+        "identity": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "mass": 3
+      },
+      {
+        "identity": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "mass": 1
+      }
+    ]
+  }
+}
